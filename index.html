@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="CastleCompany">
+
+<head>
+  <meta charset="utf-8" />
+  <title>The Castle Company assignment</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="CastleBuilderCtrl">
+
+  <div class="col-lg-4">
+    <h1>Welcome to The Castle Company!</h1>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>Please enter the land data you want to analyze.</p>
+
+          <form name="inputForm">
+            <div class="input-group">
+              <input type="text" class="form-control" name="landHeights" ng-model="landHeights" ng-list required placeholder="Land data...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" ng-click="buildCastles()" type="button">Calculate</button>
+              </span>
+            </div>
+            <span role="alert" ng-show="inputForm.landHeights.$touched">
+              <span class="error" ng-show="inputForm.landHeights.$error.required">
+                The Castle Company cant build on empty land, please enter some values and try again.
+              </span>
+            </span>
+          </form>
+
+        <br/>
+        <div ng-show="castles">
+          <span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+          {{ castles }} Castles can be built on this land.
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
