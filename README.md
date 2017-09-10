@@ -1,11 +1,12 @@
 # The Castle Company
+Assignment for recruitment at Aequilibrium
 
 ## The Problem Presented
 
 Aequilibrium is in the business of building castles (we really aren’t, but let’s pretend). Now, we also
 believe in quality aesthetics, so we only want to build castles in two types of places:
-- a. Peaks
-- b. Valleys
+a. Peaks
+b. Valleys
 
 Let’s say you have an array of integers that describes a stretch of land, where each integer represents the
 current height of the land. Can you write a function that reads that array and returns the number of
@@ -25,5 +26,5 @@ To solve this problem I assumed that the last element in the array is never a pe
 
 
 ## Running the code
-To access a running version of the code access this plunkr: https://plnkr.co/edit/EK1leYhB7MMviyVum9ll?p=preview
-- To run the tests inside the plunkr please uncomment the "boot.js" <script> tag
+To access a running version of the code access this [Plunkr](https://plnkr.co/edit/EK1leYhB7MMviyVum9ll?p=preview)
+- To run the tests inside the plunkr please uncomment the "boot.js" <script> tag in index.html
