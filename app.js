@@ -28,7 +28,6 @@ app.controller('CastleBuilderController', function ($scope) {
                     buildingPlaces++;
                 }
             }
-
         }
         return buildingPlaces;
     }
@@ -39,4 +38,5 @@ app.controller('CastleBuilderController', function ($scope) {
 
         $scope.castles = countBuildingPlaces($scope.landHeights);
     };
+
 });
