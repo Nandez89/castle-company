@@ -24,36 +24,37 @@
 
 <body ng-controller="CastleBuilderController">
 
-  <div class="col-lg-4">
+<div class="col-lg-4">
     <h1>Welcome to The Castle Company!</h1>
 
     <div class="panel panel-default">
-      <div class="panel-body">
-        <p>Please enter the land data you want to analyze.</p>
+        <div class="panel-body">
+            <p>Please enter the land data you want to analyze.</p>
 
-          <form name="inputForm">
-            <div class="input-group">
-              <input type="text" class="form-control" name="landHeights" ng-model="landHeights" ng-list required placeholder="Land data...">
-              <span class="input-group-btn">
+            <form name="inputForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="landHeights" ng-model="landHeights" ng-list required
+                           placeholder="Land data...">
+                    <span class="input-group-btn">
                 <button class="btn btn-primary" ng-click="buildCastles()" type="button">Calculate</button>
               </span>
-            </div>
-            <span role="alert" ng-show="inputForm.landHeights.$touched">
+                </div>
+                <span role="alert" ng-show="inputForm.landHeights.$touched">
               <span class="error" ng-show="inputForm.landHeights.$error.required">
                 The Castle Company can´t build on empty land, please enter some values and try again.
               </span>
             </span>
-          </form>
+            </form>
 
-        <br/>
-        <div ng-show="castles">
-          <span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
-          {{ castles }} {{castles == 1 ? 'Castle' : 'Castles'}} can be built on this land.
-          </div>
+            <br/>
+            <div ng-show="castles">
+                <span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+                {{ castles }} {{castles == 1 ? 'Castle' : 'Castles'}} can be built on this land.
+            </div>
 
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 
 </body>
 
