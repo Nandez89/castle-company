@@ -19,7 +19,7 @@ app.controller('CastleBuilderController', function ($scope) {
 
             buildingPlaces++;
 
-            for (i = 1; i < landHeights.length; i++) {
+            for (var i = 1; i < landHeights.length; i++) {
 
                 var isPeak = landHeights[i] > landHeights[i - 1] && landHeights[i] > landHeights[i + 1];
                 var isValley = landHeights[i] < landHeights[i - 1] && landHeights[i] < landHeights[i + 1];
