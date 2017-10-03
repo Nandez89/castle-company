@@ -11,7 +11,7 @@ app.controller('CastleBuilderController', function ($scope) {
         });
     };
 
-    function countBuildingPlaces(landHeights) {
+    function countBuildingPlaces(heights) {
 
         var buildingPlaces = 0;
 
