@@ -2,7 +2,7 @@ var app = angular.module('CastleCompany', ['ngMockE2E']);
 
 app.controller('CastleBuilderController', function ($scope) {
 
-    $scope.landHeights = [];
+    $scope.heights = [];
 
     $scope.removeConsecutiveDuplicates = function (array) {
         return array.filter(function (value, position, array) {
@@ -15,14 +15,14 @@ app.controller('CastleBuilderController', function ($scope) {
 
         var buildingPlaces = 0;
 
-        if (landHeights.length > 0) {
+        if (heights.length > 0) {
 
             buildingPlaces++;
 
-            for (var i = 1; i < landHeights.length; i++) {
+            for (var i = 1; i < heights.length; i++) {
 
-                var isPeak = landHeights[i] > landHeights[i - 1] && landHeights[i] > landHeights[i + 1];
-                var isValley = landHeights[i] < landHeights[i - 1] && landHeights[i] < landHeights[i + 1];
+                var isPeak = heights[i] > heights[i - 1] && heights[i] > heights[i + 1];
+                var isValley = heights[i] < heights[i - 1] && heights[i] < heights[i + 1];
 
                 if (isPeak || isValley) {
                     buildingPlaces++;
@@ -33,10 +33,9 @@ app.controller('CastleBuilderController', function ($scope) {
     }
 
     $scope.buildCastles = function () {
-        $scope.landHeights = $scope.landHeights.map(Number);
-        $scope.landHeights = $scope.removeConsecutiveDuplicates($scope.landHeights);
+        $scope.heights = $scope.heights.map(Number);
+        $scope.heights = $scope.removeConsecutiveDuplicates($scope.heights);
 
-        $scope.castles = countBuildingPlaces($scope.landHeights);
+        $scope.castles = countBuildingPlaces($scope.heights);
     };
-
 });
