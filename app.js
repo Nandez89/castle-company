@@ -5,10 +5,18 @@ app.controller('CastleBuilderController', function($scope) {
   $scope.landHeights = [];
 
   $scope.removeConsecutiveDuplicates = function(array) {
+
+
+
+
     return array.filter(function(value, position, array) {
       var previousValue = array[position - 1];
       return position === 0 || value !== previousValue;
     });
+
+
+
+
   };
 
   function countBuildingPlaces(landHeights) {
@@ -29,13 +37,24 @@ app.controller('CastleBuilderController', function($scope) {
         }
       }
 
+
+
+
     }
     return buildingPlaces;
   }
 
+
+
+
+
   $scope.buildCastles = function() {
     $scope.landHeights = $scope.landHeights.map(Number);
     $scope.landHeights = $scope.removeConsecutiveDuplicates($scope.landHeights);
+
+
+
+
 
     $scope.castles = countBuildingPlaces($scope.landHeights);
   };
