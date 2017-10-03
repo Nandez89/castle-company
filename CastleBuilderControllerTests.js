@@ -28,31 +28,31 @@ describe('Castle Company Test suit', function () {
             });
 
             it('should set castles to 1 if the input array is length 1', function () {
-                $scope.landHeights = [999];
+                $scope.heights = [999];
                 $scope.buildCastles();
 
                 expect($scope.castles).toEqual(1);
             });
 
             it('should set castles to 2 if the input array has only one peak or valley', function () {
-                $scope.landHeights = [1, 2, 1];
+                $scope.heights = [1, 2, 1];
                 $scope.buildCastles();
 
                 expect($scope.castles).toEqual(2);
 
-                $scope.landHeights = [2, 1, 2];
+                $scope.heights = [2, 1, 2];
                 $scope.buildCastles();
 
                 expect($scope.castles).toEqual(2);
             });
 
             it('should only count a peak or a valley once when its represented by consecutive equal integers', function () {
-                $scope.landHeights = [1, 2, 2, 2, 2, 1];
+                $scope.heights = [1, 2, 2, 2, 2, 1];
                 $scope.buildCastles();
 
                 expect($scope.castles).toEqual(2);
 
-                $scope.landHeights = [2, 1, 1, 1, 1, 2];
+                $scope.heights = [2, 1, 1, 1, 1, 2];
                 $scope.buildCastles();
 
                 expect($scope.castles).toEqual(2);
